@@ -77,7 +77,12 @@ static NSString *const AWSInfoRoot = @"AWS";
     }
     return [[[AWSSignInManager sharedInstance].currentSignInProvider token] continueWithSuccessBlock:^id _Nullable(AWSTask<NSString *> * _Nonnull task) {
         NSString *token = task.result;
-        return [AWSTask taskWithResult:@{[AWSSignInManager sharedInstance].currentSignInProvider.identityProviderName : token}];
+        if (token) {
+            return [AWSTask taskWithResult:@{[AWSSignInManager sharedInstance].currentSignInProvider.identityProviderName : token}];
+        } else {
+            return [AWSTask taskWithResult:nil];
+        }
+//        return [AWSTask taskWithResult:@{[AWSSignInManager sharedInstance].currentSignInProvider.identityProviderName : token}];
     }];
 }
 
