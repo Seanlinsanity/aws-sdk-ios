@@ -1,5 +1,31 @@
 # AWS Mobile SDK for iOS CHANGELOG
 
+## 2.9.8
+
+### Misc. Updates
+
+* Ensured compatibility when building with Xcode 10.2
+* Model updates for the following services
+  * Amazon Cognito Identity Provider
+  * Amazon DynamoDB
+  * Amazon EC2
+  * Amazon Simple Notification Service (SNS)
+  * AWS Lambda
+* The Amazon Cognito Sync and Amazon Cognito Identity Provider subcomponents of the AWS Mobile SDK for iOS are now licensed under the Apache 2.0 License. See LICENSE and LICENSE.APACHE for more details.
+
+## 2.9.7
+
+### New Features
+
+* **AWS Core**
+  * Added support for `ap-east-1` - AP (Hong Kong) region.
+
+### Misc. Updates
+
+* Model updates for the following services
+  * Amazon Cognito Identity Provider
+  * Amazon Transcribe
+
 ## 2.9.6
 
 ### Bug Fixes
